@@ -1,24 +1,9 @@
-# README
+A very simple Ruby on Rails practice app. Made during mod 2 of the Flatiron Software Engeneering Bootcamp as a practice app from CRUD.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Books-Watch-The-Demo](https://i.imgur.com/CEZ5afk.png)](https://youtu.be/qAr8VgXJTpE)
 
-Things you may want to cover:
+![Users-Page](https://i.imgur.com/kgMN98O.png)
 
-* Ruby version
+![Book-Page](https://i.imgur.com/YwwjZGq.png)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Add a user](https://i.imgur.com/yIGKlRL.png)
