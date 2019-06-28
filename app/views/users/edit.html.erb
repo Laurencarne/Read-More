@@ -1,0 +1,24 @@
+<div class="container">
+<br>
+<h1 class="text-success">Update User Info: </h1>
+<br>
+<div class="text-danger">
+  <%= form_for @user do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <br>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <br>
+  <%= f.label :password %>
+  <%= f.text_field :password %>
+  <br>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <br>
+  <%=  f.submit class: "btn btn-info" %>
+  <span class="btn btn-danger"><%= link_to "Delete User", :method => :delete %></span>
+  <span class="btn btn-warning"><%= link_to "Main Menu", users_path, :class => "text-white" %></span>
+<% end %>
+</div>
+</div>

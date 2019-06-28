@@ -1,0 +1,13 @@
+<div class="container">
+  <br>
+  <h1 class="text-danger">Reviews: </h1>
+  <br>
+  <% @userbook.each do |userbook| %>
+  <p class="text-danger"><%= link_to user.name, user_path(user), :class => "text-info" %></p>
+  <% end %>
+  <br>
+  <button type="button" class="btn btn-warning"><%= link_to "Main Menu", users_path, :class => "text-white" %></button>
+  <button type="button" class="btn btn-danger"><%= link_to "Add a New User", new_user_path, :class => "text-white" %></button>
+  <button type="button" class="btn btn-info"><%= link_to "Books Menu", books_path, :class => "text-white" %></button>
+  <button type="button" class="btn btn-success"><%= link_to "Reviews Menu", user_books_path, :class => "text-white"%></button>
+</div>

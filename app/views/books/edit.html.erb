@@ -1,0 +1,24 @@
+<div class="container">
+<br>
+<h1 class="text-success">Update Book Info: </h1>
+<br>
+<div class="text-danger">
+  <%= form_for @book do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :genre %>
+  <%= f.text_field :genre %>
+  <br>
+  <%= f.label :author %>
+  <%= f.text_field :author %>
+  <br>
+  <%= f.label :synopsis %>
+  <%= f.text_area :synopsis %>
+  <br>
+  <%=  f.submit class: "btn btn-info" %>
+  <span class="btn btn-danger"><%= link_to "Delete Book", :method => :delete, :class => "text-white" %></span>
+  <span class="btn btn-warning"><%= link_to "Main Menu", books_path, :class => "text-white" %></span>
+<% end %>
+</div>
+</div>

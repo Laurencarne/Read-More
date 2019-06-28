@@ -1,0 +1,23 @@
+<div class="container">
+  <br>
+  <h1 class="text-success">Add a New Book: </h1>
+    <div class="text-danger">
+      <%= form_for @book do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <br>
+      <%= f.label :genre %>
+      <%= f.text_field :genre %>
+      <br>
+      <%= f.label :author %>
+      <%= f.text_field :author %>
+      <br>
+      <%= f.label :synopsis %>
+      <%= f.text_field :synopsis %>
+      <br>
+      <%=  f.submit class: "btn btn-info" %>
+      <% end %>
+    </div>
+    <br>
+    <div class="btn btn-warning"><%= link_to "Main Menu", books_path %></div>
+</div>

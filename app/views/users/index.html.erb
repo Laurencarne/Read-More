@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <button class="btn btn-warning" type="button"><%= link_to "Main Menu", users_path, :class => "text-white" %></button>
+    <button class="btn btn-info" type="button"><%= link_to "Books Menu", books_path, :class => "text-white" %></button>
+  </form>
+</nav>
+
+
+<div class="container">
+  <br>
+  <h1 class="text-danger">Users: </h1>
+  <br>
+  <% @users.each do |user| %>
+  <p class="text-danger"><%= link_to user.name, user_path(user), :class => "text-info" %></p>
+  <% end %>
+  <br>
+  <button type="button" class="btn btn-danger"><%= link_to "Add a New User", new_user_path, :class => "text-white" %></button>
+</div>

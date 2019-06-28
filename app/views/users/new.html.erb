@@ -1,0 +1,26 @@
+<div class="container">
+  <br>
+  <h1 class="text-success">Add a New User: </h1>
+    <div class="text-danger">
+      <%= form_for @user do |f| %>
+      <%= f.label :user_name %>
+      <%= f.text_field :user_name %>
+      <br>
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+      <br>
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+      <br>
+      <%= f.label :password %>
+      <%= f.text_field :password %>
+      <br>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+      <br>
+      <%=  f.submit class: "btn btn-info" %>
+      <% end %>
+    </div>
+    <br>
+    <div class="btn btn-warning"><%= link_to "Main Menu", users_path %></div>
+</div>

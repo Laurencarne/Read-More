@@ -1,0 +1,30 @@
+<nav class="navbar navbar-light bg-light">
+  <form class="form-inline">
+    <button class="btn btn-warning" type="button"><%= link_to "Main Menu", books_path, :class => "text-white" %></button>
+    <button class="btn btn-info" type="button"><%= link_to "Users Menu", users_path, :class => "text-white" %></button>
+  </form>
+</nav>
+
+<div class="container">
+  <br>
+  <h1 class="text-success"><%= @book.name%></h1>
+  <br>
+  <h4 class="text-success">Owner: </h4>
+  <br>
+  <% @book.users.each do |user| %>
+  <ul>
+    <li class="text-success"><%= link_to user.name, user_path(user), :class => "text-info" %></li>
+  </ul>
+  <% end %>
+  <br>
+  <h4 class="text-warning">Reviews: </h4>
+  <br>
+  <% @book.user_books.each do |userbook| %>
+    <h5 class="text-info"><%= userbook.user.first_name %></h5>
+    <h6 class="text-success">"<%= userbook.review %>"</h6>
+    <p class="text-success">Read Status: <%= userbook.read_status %></p>
+    <p class="text-success">Rating: <%= userbook.rating %></p>
+  <% end %>
+  <br>
+  <button type="button" class="btn btn-danger"><%= link_to "Edit Book", edit_book_path(@book), :class => "text-white" %></button>
+</div>
